@@ -31,6 +31,7 @@ namespace Full_GRASP_And_SOLID
             printer.PrintRecipe(recipe, Destination.Console);
             printer.PrintRecipe(recipe, Destination.File);
 
+            //Estre programa usa polimorfismo 
             IPrinter printer1 = new ConsolePrinter();
             printer1.PrintTicket(recipe);
             IPrinter filePrinter = new FilePrinter();
