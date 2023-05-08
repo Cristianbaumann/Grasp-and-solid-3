@@ -17,6 +17,7 @@ namespace Full_GRASP_And_SOLID
 
         private static ArrayList equipmentCatalog = new ArrayList();
 
+
         public static void Main(string[] args)
         {
             PopulateCatalogs();
@@ -29,6 +30,11 @@ namespace Full_GRASP_And_SOLID
             AllInOnePrinter printer = new AllInOnePrinter();
             printer.PrintRecipe(recipe, Destination.Console);
             printer.PrintRecipe(recipe, Destination.File);
+
+            IPrinter printer1 = new ConsolePrinter();
+            printer1.PrintTicket(recipe);
+            IPrinter filePrinter = new FilePrinter();
+            filePrinter.PrintTicket(recipe);
         }
 
         private static void PopulateCatalogs()
